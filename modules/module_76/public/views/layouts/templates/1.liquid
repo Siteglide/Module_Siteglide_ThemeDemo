@@ -1,0 +1,33 @@
+---
+metadata:
+  id: 1
+  name: Main
+  type: page
+  file_type: template
+  last_edit: 1638801873190
+  is_default: true
+  use_studio: false
+  use_studio_bs5: false
+  use_design_system: false
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% include 'modules/siteglide_system/siteglide_head' -%}
+	<title>Page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" href="{{ 'modules/module_76/scss/bootstrap-theme.min.css' | asset_url }}">
+	<link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+	{%- include 'header', module: 'module_76', id: '1', name: 'Main Header' -%}
+	{{ content_for_layout }}
+	{%- include 'footer', module: 'module_76', id: '1', name: 'Main Footer' -%}
+	{% include 'modules/siteglide_system/siteglide_foot' -%}
+</body>
+</html>
